@@ -23,7 +23,8 @@ Sample Output 1 :
 
 
 #include <queue>
-
+#include <stack>
+using namespace std;
 vector<int> kSmallest(int *input, int n, int k) {
 	
 	priority_queue<int>min;
@@ -40,11 +41,16 @@ vector<int> kSmallest(int *input, int n, int k) {
         
         }
     }
-    
-    while(!min.empty()){
-        
-        cout<<min.top()<<endl;
+    stack<int> temp;
+    while(!min.empty()){  
+        //cout<<min.top()<<" ";
+        temp.push(min.top());
         min.pop();
+    
+    }
+    while(!temp.empty()){  
+        cout<<temp.top()<<" ";
+        temp.pop();
     
     }
 }
