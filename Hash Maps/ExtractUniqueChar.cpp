@@ -18,9 +18,10 @@ abcde
 /*************************************************************** SOLUTION ****************************************************************/
 
 #include <cstring>
+#include <string.h>
 #include <unordered_map>
-char* uniqueChar(char *str){
-    int len = strlen(str);
+string uniqueChar(string str){
+    int len = str.length();
     if(len == 0){
         char *ans = new char[1];
         ans[0] = '\0';
